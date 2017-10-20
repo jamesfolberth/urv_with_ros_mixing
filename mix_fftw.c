@@ -666,6 +666,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
    /************/
    /* Clean up */
    /************/
+   fftw_cleanup_threads();
    //TODO: only free if we called mxArrayToString
    //mxFree(opt.side);
    //mxFree(opt.transform);
